@@ -12,8 +12,8 @@ df=pd.read_csv(r'C:\\Users\\rosal\\Downloads\\Titanic-Dataset.csv')
 #print(df.duplicated().sum())
 #print(df.isnull().sum())
 df["Age"].fillna(df["Age"].median(), inplace=True)
-#print(df.describe())
-'''
+print(df.describe())
+
 sns.countplot(x='Survived', data=df,)
 plt.title('Target Distribution')
 plt.show()
@@ -67,7 +67,7 @@ sns.barplot(x=survival_by_sib.index, y=survival_by_sib.values, palette="coolwarm
 plt.xlabel("SIblings(?)")
 plt.ylabel("Survival Rate")
 plt.title("Survival Rate by Siblings(?)")
-plt.show()'''
+plt.show()
 
 df_new=df.drop(columns=['Name','Cabin','Ticket'])
 
